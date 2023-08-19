@@ -1,4 +1,4 @@
- import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/contactsSlice';
 import { getContacts } from '../../redux/selectors';
 import Notiflix from 'notiflix';
@@ -23,7 +23,6 @@ export const ContactForm = () => {
     } else { 
       dispatch(addContact(contactName, contactNumber));
     }
-
     form.reset();
   };
   return (
@@ -47,6 +46,8 @@ export const ContactForm = () => {
                 className="form-control"
                 type="text"
                 name="name"
+                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
               />
             </div>
@@ -70,17 +71,14 @@ export const ContactForm = () => {
                 type="tel"
                 name="number"
                 className="form-control mt-1"
+                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +" 
                 required
               />
             </div>
           </div>
         </label> 
-        <button
-          type="submit"
-          className="btn btn-dark btn-outline-warning w-30 btn-lg"
-        >
-          Add contact
-        </button>
+        <button type="submit" className="btn btn-dark btn-outline-warning w-30 btn-lg"> Add contact</button>
       </div>
     </form>
   );

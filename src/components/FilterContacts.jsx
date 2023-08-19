@@ -1,4 +1,4 @@
- import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getFilters } from '../redux/selectors';
 import { changeTextFilter } from 'redux/filtersSlice';
 

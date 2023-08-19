@@ -35,25 +35,12 @@ export const ContactList = () => {
         <tbody>
           {filteredContacts.map(contact => (
             <tr key={contact.id} className="fw-normal">
-              <td className="text-center align-middle"> 
-                  <>
-                    {contact.name
-                      .split(' ')
-                      .map(n => n.charAt(0).toUpperCase() + n.slice(1))
-                      .join(' ')}
-                  </>  
+              <td className="text-center align-middle">  
+                    {contact.name.split(' ').map(n => n.charAt(0).toUpperCase() + n.slice(1)).join(' ')} 
               </td>
               <td className="text-center align-middle">{contact.number}</td>
               <td className="text-center align-middle">
-                <button
-                  className="btn btn-warning"
-                  type="button"
-                  onClick={() => {
-                    handleRemove(contact.id);
-                  }}
-                >
-                  Delete
-                </button>
+                <button className="btn btn-warning" type="button" onClick={() => {handleRemove(contact.id);}}> Delete</button>
               </td>
             </tr>
           ))}
