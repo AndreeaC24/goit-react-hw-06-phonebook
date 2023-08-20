@@ -4,7 +4,7 @@ import { FilterContacts } from './FilterContacts';
 
 export const App = () => {
   return (
-    <div className="container bg-dark text-light">
+    <div className="container bg-dark text-light col-12">
       <div className="d-flex flex-row flex-wrap justify-content-start m-3">
         <div className="d-flex flex-row align-items-center">
           <h1 className="m-3 display-4">Phonebook </h1>

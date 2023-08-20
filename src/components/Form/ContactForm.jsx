@@ -27,7 +27,7 @@ export const ContactForm = () => {
   };
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <div className="d-flex flex-row justify-content-start align-items-center gap-5">
+      <div className="d-flex flex-column flex-lg-row justify-content-start align-items-center gap-5 mx-2">
         <label className="me-2">
           <div className="form-group input-group">
             <div className="input-group-text bg-warning border border-dark">

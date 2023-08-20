@@ -11,7 +11,7 @@ export const FilterContacts = () => {
     dispatch(changeTextFilter(name));
   };
   return (
-    <div className="d-flex align-items-center">
+    <div className="d-flex flex-column flex-sm-row  align-items-center">
       <h3 className="fs-5 text-warning">Find contacts by name</h3>
       <label className="mx-2 form-outline">
         <input
